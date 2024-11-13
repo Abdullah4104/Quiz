@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: rgb(215, 229, 235);
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wrap,
+    .wrap2 {
+        /* color: white; */
+        border-radius: 20px;
+        width: 80%;
+        padding: 20px;
+        box-shadow: 0px 0px 10px rgb(167, 162, 162);
+        margin-top: 5%;
+        max-width: 80%;
+        /* background-image: url(../../../../Pictures/maths.jpg); */
+
+    }
+
+    input {
+        display: flex;
+        flex-direction: column;
+        margin-left: 35px;
+        gap: 20px;
+
+
+    }
+</style>
+
+<body>
+    <div id="wrapper" class="wrapper">
+        <div style="display: block;" id="wrap" class="wrap">
+            <p style="font-size: 40px;text-align: center; font-weight: 700;">Quiz Application</p>
+            <p id="timer" style="text-align: right; font-size: 1rem; color: green;"></p>
+            <hr style="width: 90%;">
+
+            <p style="color: green; margin-left: 5px;" id="showQuestionNo">Question 1 of 5</p>
+
+            <div id="quest1" style="display: block;">
+                <p style="font-size: 20px;text-align: center; font-weight: 700; text-align: left; margin-left: 15px;">
+                    Who is the first president of the United States</p>
+                <div style="display: flex; gap: 10px;">
+                    <input name="opt" type="radio"><span>Jane Morrison</span><br>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <input id="correct1" name="opt" type="radio"><span>George Washington</span><br>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <input name="opt" type="radio"><span>Abraham Lincoln</span><br>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <input name="opt" type="radio"><span>Albert Einstein</span>
+                </div>
+            </div>
+
+
+
+
+            <div id="quest2" style="display: none;">
+                <p style="font-size: 20px;text-align: center; font-weight: 700; text-align: left; margin-left: 15px;">
+                    Who is the father of computer</p>
+                <div style="display: flex; gap: 10px;">
+                    <input name="option" type="radio"><span>Akinade Damilola</span><br>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <input id="correct2" name="option" type="radio"><span>Charles Babbage</span><br>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <input name="option" type="radio"><span>Marie Curie</span><br>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <input name="option" type="radio"><span>Bill Gate</span>
+                </div>
+            </div>
+
+
+
+
+
+            <div id="quest3" style="display: none;">
+                <p style="font-size: 20px;text-align: center; font-weight: 700; text-align: left; margin-left: 15px;">
+                    Who invented the law of gravity</p>
+
+                <div style="display: flex; gap: 10px;">
+                    <input name="option" type="radio"><span>Akinade Damilola</span><br>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <input name="option" type="radio"><span>John Dalton</span><br>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <input name="option" type="radio"><span>Marie Curie</span><br>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <input id="correct3" name="option" type="radio"><span>Issac Newton</span>
+                </div>
+            </div>
+
+
+
+
+            <div id="quest4" style="display: none;">
+                <p style="font-size: 20px;text-align: center; font-weight: 700; text-align: left; margin-left: 15px;">
+                    Who is the father of genetics</p>
+                <div style="display: flex; gap: 10px;">
+                    <input name="option1" type="radio"><span>Akinade Damilola</span><br>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <input name="option1" type="radio"><span>George Bush </span><br>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <input name="option1" type="radio"><span>Brad Pitt </span><br>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <input id="correct4" name="option1" type="radio"><span>Gregor Mendel</span>
+                </div>
+            </div>
+
+
+
+
+            <div id="quest5" style="display: none;">
+                <p style="font-size: 20px;text-align: center; font-weight: 700; text-align: left; margin-left: 15px;">
+                    Who is won the ballon dor award in the year 2024</p>
+                <div style="display: flex; gap: 10px;">
+                    <input name="option2" type="radio"><span>Akinade Damilola</span><br>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <input name="option2" type="radio"><span>Vinicius Jr</span><br>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <input id="correct5" name="option2" type="radio"><span>Hernadez Rodri</span><br>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <input name="option2" type="radio"><span>Jude Bellingham</span>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: center; align-items: center;"><button onclick="submit()"
+                    style="font-size: 25px;color: white; border-radius: 5px; width: 80%; margin-top: 30px; height: 40px; background-color: green; border: none;">Submit</button>
+            </div>
+            <div style="margin-top: 30px; display: flex; justify-content: space-around;">
+                <button onclick="prev()"
+                    style="width: 60px;border-radius: 5px; height: 30px; background-color: red; border: none;">Prev</button>
+                <button id="nextQ" onclick="next()"
+                    style="border-radius: 5px; width: 60px; height: 30px; background-color: blue; border: none;">Next</button>
+            </div>
+        </div>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: center;">
+        <div style="display: none;" id="wrap2" class="wrap2">
+            <p style="font-size: 40px;text-align: center; font-weight: 700;">Quiz Application</p>
+            <hr style="width: 90%;">
+
+            <p style="text-align: center; font-size: larger;">Your Score is :</p>
+            <p style="color: green; font-size: xx-large; text-align: center;" id="userScore"></p>
+        </div>
+
+    </div>
+</body>
+<script>
+    let quest1 = document.getElementById('quest1')
+    let quest2 = document.getElementById('quest2')
+    let quest3 = document.getElementById('quest3')
+    let quest4 = document.getElementById('quest4')
+    let quest5 = document.getElementById('quest5')
+    let correct1 = document.getElementById('correct1')
+    let correct2 = document.getElementById('correct2')
+    let correct3 = document.getElementById('correct3')
+    let correct4 = document.getElementById('correct4')
+    let correct5 = document.getElementById('correct5')
+    let timer = document.getElementById('timer')
+    let score = 0;
+    let time = 31
+    console.log(score);
+
+
+    function next() {
+        if (quest1.style.display == 'block') {
+            quest1.style.display = 'none'
+            quest2.style.display = 'block'
+            document.getElementById('showQuestionNo').innerHTML = 'Question 2 of 5'
+        } else if (quest2.style.display == 'block') {
+            quest2.style.display = 'none'
+            quest3.style.display = 'block'
+            document.getElementById('showQuestionNo').innerHTML = 'Question 3 of 5'
+        }
+        else if (quest3.style.display == 'block') {
+            quest3.style.display = 'none'
+            quest4.style.display = 'block'
+            document.getElementById('showQuestionNo').innerHTML = 'Question 4 of 5'
+        }
+        else if (quest4.style.display == 'block') {
+            quest4.style.display = 'none'
+            quest5.style.display = 'block'
+            document.getElementById('showQuestionNo').innerHTML = 'Question 5 of 5'
+        } else if (quest5.style.display == 'block') {
+            
+
+        } else {
+
+        }
+
+        showScore();
+
+
+    }
+    function prev() {
+        if (quest2.style.display == 'block') {
+            quest2.style.display = 'none'
+            quest1.style.display = 'block'
+            document.getElementById('showQuestionNo').innerHTML = 'Question 1 of 5'
+        } else if (quest3.style.display == 'block') {
+            quest3.style.display = 'none'
+            quest2.style.display = 'block'
+            document.getElementById('showQuestionNo').innerHTML = 'Question 2 of 5'
+        }
+        else if (quest4.style.display == 'block') {
+            quest4.style.display = 'none'
+            quest3.style.display = 'block'
+            document.getElementById('showQuestionNo').innerHTML = 'Question 3 of 5'
+        }
+        else if (quest5.style.display == 'block') {
+            quest5.style.display = 'none'
+            quest4.style.display = 'block'
+            document.getElementById('showQuestionNo').innerHTML = 'Question 4 of 5'
+        } else {
+
+        }
+    }
+    function showScore() {
+        
+        if (correct1.checked) {
+            ++score
+    
+            return score;
+
+        } else {
+
+        }
+        if (correct2.checked) {
+            ++score
+            return score;
+
+        } else {
+
+        }
+        if (correct3.checked) {
+            ++score
+            console.log(score);
+            return score;
+        } else {
+
+        }
+        if (correct4.checked) {
+            ++score
+            console.log(score);
+            return score;
+        } else {
+
+        }
+
+    }
+
+    function submit() {
+
+        if (score < 3) {
+            document.getElementById('userScore').style.color = 'red'
+        }
+        else {
+            document.getElementById('userScore').style.color = 'green'
+        }
+        document.getElementById('wrap').style.display = 'none'
+        document.getElementById('wrap2').style.display = 'block'
+        document.getElementById('userScore').innerHTML = score + '/5'
+        if (correct5.checked) {
+            ++score
+            console.log(score);
+            return score;
+        } else {
+
+        }
+
+
+    }
+    setInterval(() => {
+        time--
+        timer.innerHTML = time + '.00s'
+
+    }, 1000);
+    function eliminate() {
+        if (time < 11) {
+            timer.style.color = 'yellow'
+        }
+        if (time < 6) {
+            timer.style.color = 'red'
+        }
+        else if (score < 3) {
+            document.getElementById('userScore').style.color = 'red'
+
+        } else {
+            document.getElementById('userScore').style.color = 'green'
+        }
+        if (time == 0) {
+            document.getElementById('wrap').style.display = 'none'
+            document.getElementById('wrap2').style.display = 'block'
+            document.getElementById('userScore').innerHTML = score + '/5'
+
+        }
+
+
+    }
+    if (correct5.checked) {
+        ++score
+        console.log(score);
+
+    } else {
+
+    }
+    showScore();
+    setInterval(eliminate, 1000)
+    eliminate();
+
+
+
+</script>
+
+</html>
